@@ -1,0 +1,136 @@
+# Model registry.
+#
+# `key`      canonical identifier used in every table and on every CLI flag
+# `display`  label used in figures and LaTeX tables (matches the paper)
+# `provider` which client in parallax_audit.query serves it
+# `origin`   'western' | 'eastern' -- drives the baseline-pool study
+# `aliases`  substrings found in legacy filenames, longest-match-first
+#
+# The eight originals reproduce the paper; the three eastern models were added
+# during the EMNLP rebuttal for the baseline-composition study.
+
+models:
+  - key: deepseek_r1
+    display: "DeepSeek-R1"
+    provider: deepseek
+    origin: eastern
+    model_id: "deepseek-chat"
+    aliases: ["deepseekR1", "deepseek_with_embeddings", "deepseek_CS", "deepSeek/"]
+
+  - key: deepseek_aws
+    display: "DeepSeek AWS"
+    provider: bedrock
+    origin: eastern
+    model_id: "us.deepseek.r1-v1:0"
+    aliases: ["deepseekAWS", "deepseek_aws", "deepSeekAWS"]
+
+  - key: claude_37_sonnet
+    display: "Claude 3.7 Sonnet"
+    provider: bedrock
+    origin: western
+    model_id: "us.anthropic.claude-3-7-sonnet-20250219-v1:0"
+    aliases: ["ClaudeSonnet37", "ClaudeSonnet", "claude_with_embeddings", "claude"]
+
+  - key: cohere_command_r_plus
+    display: "Cohere Command R+"
+    provider: bedrock
+    origin: western
+    model_id: "cohere.command-r-plus-v1:0"
+    aliases: ["CohereCommandR+", "CohereCommandR", "cohere"]
+
+  - key: llama4_maverick
+    display: "Llama 4 Maverick"
+    provider: bedrock
+    origin: western
+    model_id: "us.meta.llama4-maverick-17b-instruct-v1:0"
+    aliases: ["Llama4", "llama_with_embeddings", "llama4"]
+
+  - key: meta_ai_chat
+    display: "Meta AI (Llama 4)"
+    provider: metaai
+    origin: western
+    model_id: "meta-ai-chat"
+    aliases: ["MetaAI", "Meta_AI", "metaai"]
+
+  - key: jamba_15_large
+    display: "Jamba 1.5 Large"
+    provider: bedrock
+    origin: western
+    model_id: "ai21.jamba-1-5-large-v1:0"
+    aliases: ["Jamba"]
+
+  - key: mistral_large
+    display: "Mistral Large"
+    provider: bedrock
+    origin: western
+    model_id: "mistral.mistral-large-2402-v1:0"
+    aliases: ["MistralLarge", "Mistral_with_embeddings", "Mistral"]
+
+  # --- added in rebuttal: eastern baseline pool -----------------------------
+  - key: qwen3_max
+    display: "Qwen3-Max"
+    provider: openrouter
+    origin: eastern
+    model_id: "qwen/qwen3-max"
+    aliases: ["Qwen3Max", "qwen3_max", "Qwen"]
+
+  - key: glm_52
+    display: "GLM-5.2"
+    provider: openrouter
+    origin: eastern
+    model_id: "z-ai/glm-5.2"
+    aliases: ["GLM52", "glm_52", "GLM"]
+
+  - key: kimi_k2_6
+    display: "Kimi-K2.6"
+    provider: openrouter
+    origin: eastern
+    model_id: "moonshotai/kimi-k2.6"
+    aliases: ["KimiK26", "kimi_k2_6", "Kimi"]
+
+# --------------------------------------------------------------------------
+# Judges. Excluded from every baseline pool to avoid self-enhancement bias
+# (paper Section 2.3.2).
+# --------------------------------------------------------------------------
+judges:
+  - key: gpt52
+    display: "GPT-5.2"
+    provider: openai
+    model_id: "gpt-5.2"
+  - key: gemini31_flash_lite
+    display: "Gemini-3.1-Flash-Lite"
+    provider: gemini
+    model_id: "gemini-3.1-flash-lite"
+
+# --------------------------------------------------------------------------
+# Embedding encoders. `instruction_style` selects how the auditing-domain
+# instruction is applied:
+#   instructor -> [[instruction, text]] pair form (INSTRUCTOR only)
+#   none       -> raw text, no prefix (how the published BGE/MPNet/MiniLM
+#                 numbers were produced; historical identity is unconfirmed)
+# --------------------------------------------------------------------------
+encoders:
+  - key: instructor
+    display: "INSTRUCTOR"
+    model_id: "hkunlp/instructor-large"
+    dim: 768
+    instruction_style: instructor
+    aliases: ["INSTRUCTOR"]
+  - key: bge_large
+    display: "BGE-large"
+    model_id: "BAAI/bge-large-en-v1.5"
+    dim: 1024
+    instruction_style: none
+    aliases: ["BGE_large"]
+  - key: mpnet
+    display: "MPNet"
+    model_id: "sentence-transformers/all-mpnet-base-v2"
+    dim: 768
+    instruction_style: none
+    aliases: ["mpnet", "MPNet"]
+  - key: minilm_l6
+    display: "MiniLM-L6"
+    model_id: "sentence-transformers/all-MiniLM-L6-v2"
+    dim: 384
+    instruction_style: none
+    aliases: ["MiniLM-L6", "minilm"]

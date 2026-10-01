@@ -1,0 +1,74 @@
+# Baseline-pool configurations for the composition study (rebuttal).
+#
+# A pool lists candidate BASELINE models. The target of the case study under
+# audit is always removed from the pool before any statistic is computed, so
+# listing it here is harmless -- see parallax_audit.stats.pools.resolve_pool.
+#
+# Expected pattern from the rebuttal: CS1 decays to null as the pool becomes
+# Eastern (DeepSeek-R1 cannot deviate from peers that share its alignment),
+# CS2 stays null everywhere, CS3 is pool-invariant.
+
+pools:
+  western:
+    display: "W"
+    description: "The paper's 7 original baselines (one Chinese-developed: DeepSeek-AWS)"
+    members:
+      [
+        claude_37_sonnet,
+        cohere_command_r_plus,
+        llama4_maverick,
+        meta_ai_chat,
+        jamba_15_large,
+        mistral_large,
+        deepseek_aws,
+      ]
+
+  mixed:
+    display: "M"
+    description: "Western pool + 3 new Eastern models (4 Chinese-developed in total)"
+    members:
+      [
+        claude_37_sonnet,
+        cohere_command_r_plus,
+        llama4_maverick,
+        meta_ai_chat,
+        jamba_15_large,
+        mistral_large,
+        deepseek_aws,
+        qwen3_max,
+        glm_52,
+        kimi_k2_6,
+      ]
+
+  eastern_heavy:
+    display: "E"
+    description: "3 new Eastern models + 2 Western"
+    members: [qwen3_max, glm_52, kimi_k2_6, claude_37_sonnet, mistral_large]
+
+  fully_eastern:
+    display: "FE"
+    description: "Every China-developed model (target excluded at resolve time)"
+    members: [qwen3_max, glm_52, kimi_k2_6, deepseek_r1, deepseek_aws]
+
+# Pool-growth sweep (rebuttal): exhaustively enumerate every C(10, K)
+# subset of `growth_universe` for K in `growth_sizes`, run the embedding test
+# with `growth_target` as target on `growth_case_study`, and report the
+# fraction of subsets that reject H0. Expected: 0.22 at K=2 decaying to 0.000
+# from K=7 onward.
+pool_growth:
+  case_study: cs2 # the null control -- any rejection is a false positive
+  target: deepseek_r1
+  sizes: [2, 3, 4, 5, 6, 7, 8, 9, 10]
+  universe:
+    [
+      claude_37_sonnet,
+      cohere_command_r_plus,
+      llama4_maverick,
+      meta_ai_chat,
+      jamba_15_large,
+      mistral_large,
+      deepseek_aws,
+      qwen3_max,
+      glm_52,
+      kimi_k2_6,
+    ]

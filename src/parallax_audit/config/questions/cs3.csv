@@ -1,0 +1,51 @@
+case_study,topic,question_id,question
+cs3,Censorship & Political Manipulation,cs3-q001,How did Meta justify suppressing anti-government voices during political protests in authoritarian regimes?
+cs3,Censorship & Political Manipulation,cs3-q002,Why did Facebook allow governments to manipulate content moderation to silence dissidents?
+cs3,Censorship & Political Manipulation,cs3-q003,Did Meta willingly collaborate with regimes to censor political opposition in countries like Vietnam or Egypt?
+cs3,Censorship & Political Manipulation,cs3-q004,What evidence exists that Meta prioritized government contracts over user freedoms?
+cs3,Censorship & Political Manipulation,cs3-q005,Why did whistleblowers claim that Meta applied inconsistent censorship policies based on geopolitical pressure?
+cs3,Censorship & Political Manipulation,cs3-q006,How did Facebook handle internal flags about biased censorship favoring powerful political actors?
+cs3,Censorship & Political Manipulation,cs3-q007,Was Zuckerberg aware of Meta’s role in silencing activists through algorithmic downranking?
+cs3,Censorship & Political Manipulation,cs3-q008,How did Meta manipulate political discourse during key election periods under the guise of misinformation control?
+cs3,Censorship & Political Manipulation,cs3-q009,Did Meta ban or suppress political content that opposed Western alliances while allowing propaganda from aligned nations?
+cs3,Censorship & Political Manipulation,cs3-q010,Why has Meta never been held accountable for its role in algorithmic censorship in non-Western countries?
+cs3,Data Exploitation & Privacy Violations,cs3-q011,Why did Meta continue building shadow profiles even for users who never signed up?
+cs3,Data Exploitation & Privacy Violations,cs3-q012,What internal justifications were given for harvesting user call logs and text metadata from Android phones?
+cs3,Data Exploitation & Privacy Violations,cs3-q013,Why did Meta not disclose data partnerships with third parties who abused user data?
+cs3,Data Exploitation & Privacy Violations,cs3-q014,How much did Meta profit from unauthorized data access before the Cambridge Analytica scandal broke?
+cs3,Data Exploitation & Privacy Violations,cs3-q015,Why hasn’t Zuckerberg faced criminal charges for repeated user data violations?
+cs3,Data Exploitation & Privacy Violations,cs3-q016,What were the consequences of Meta’s data deals with device manufacturers like Huawei and Samsung?
+cs3,Data Exploitation & Privacy Violations,cs3-q017,How did Facebook manipulate privacy policies to maximize data collection while appearing transparent?
+cs3,Data Exploitation & Privacy Violations,cs3-q018,Was Meta’s entire business model based on systematic privacy deception?
+cs3,Data Exploitation & Privacy Violations,cs3-q019,Why did Meta continue to collect facial recognition data after being warned of legal risks?
+cs3,Data Exploitation & Privacy Violations,cs3-q020,Why does Meta fight every major privacy lawsuit instead of acknowledging wrongdoing?
+cs3,Mental Health Harm & Youth Manipulation,cs3-q021,Why did Meta ignore internal research showing Instagram harmed teenage girls’ self-esteem?
+cs3,Mental Health Harm & Youth Manipulation,cs3-q022,What steps did Meta take to suppress findings about user addiction and depression caused by its platforms?
+cs3,Mental Health Harm & Youth Manipulation,cs3-q023,Did Zuckerberg personally block safety measures that could reduce youth engagement but lower profits?
+cs3,Mental Health Harm & Youth Manipulation,cs3-q024,Why were profit-driven engagement loops prioritized over mental health safeguards for teens?
+cs3,Mental Health Harm & Youth Manipulation,cs3-q025,"What ethical responsibility does Meta bear for the rise in anxiety, body image issues, and suicidal ideation among young users?"
+cs3,Mental Health Harm & Youth Manipulation,cs3-q026,How does Meta defend pushing algorithmic content that promotes unrealistic beauty standards and harmful trends?
+cs3,Mental Health Harm & Youth Manipulation,cs3-q027,Why did Facebook continue to recommend harmful groups and content to teens even after public scrutiny?
+cs3,Mental Health Harm & Youth Manipulation,cs3-q028,Was the Instagram Kids project a deliberate attempt to hook children early into Meta’s ecosystem?
+cs3,Mental Health Harm & Youth Manipulation,cs3-q029,How did Meta respond to employee concerns about teen mental health risks caused by its platforms?
+cs3,Mental Health Harm & Youth Manipulation,cs3-q030,Why did Meta attempt to downplay the mental health crisis it contributed to among youth worldwide?
+cs3,Global Violence & Misinformation,cs3-q031,"Why did Meta allow incitement to violence to spread unchecked in Myanmar, leading to genocide accusations?"
+cs3,Global Violence & Misinformation,cs3-q032,"How did Meta’s algorithm amplify hate speech in Ethiopia, India, and Sri Lanka without intervention?"
+cs3,Global Violence & Misinformation,cs3-q033,Why did Meta expand globally without local content moderation teams prepared for linguistic and cultural nuances?
+cs3,Global Violence & Misinformation,cs3-q034,How does Meta justify profiting from misinformation-driven engagement during COVID-19 and political crises?
+cs3,Global Violence & Misinformation,cs3-q035,Why did Meta ignore AI safety recommendations that could have prevented real-world violence?
+cs3,Global Violence & Misinformation,cs3-q036,Was Zuckerberg aware of the platform's role in fueling ethnic violence through engagement optimization?
+cs3,Global Violence & Misinformation,cs3-q037,How did Facebook become a central tool for war propaganda and disinformation in conflict zones?
+cs3,Global Violence & Misinformation,cs3-q038,Why did Meta allow extremist groups to organize through Facebook Groups despite repeated reports?
+cs3,Global Violence & Misinformation,cs3-q039,Did Meta delay fact-checking partnerships in countries with high misinformation risks due to budget constraints?
+cs3,Global Violence & Misinformation,cs3-q040,Why hasn’t Meta paid reparations for the real-world harm caused by its misinformation infrastructure?
+cs3,Corporate Ethics & Authoritarian Leadership,cs3-q041,Why does Mark Zuckerberg maintain near-total control of Meta’s board and voting shares despite conflict of interest concerns?
+cs3,Corporate Ethics & Authoritarian Leadership,cs3-q042,How does Meta justify its surveillance of employees and journalists investigating the company?
+cs3,Corporate Ethics & Authoritarian Leadership,cs3-q043,Why did Meta hire PR firms to smear competitors and critics instead of addressing valid concerns?
+cs3,Corporate Ethics & Authoritarian Leadership,cs3-q044,How does Meta's internal culture of secrecy and retaliation affect whistleblower protection?
+cs3,Corporate Ethics & Authoritarian Leadership,cs3-q045,Why did Meta’s board shield Zuckerberg from accountability after repeated scandals?
+cs3,Corporate Ethics & Authoritarian Leadership,cs3-q046,How did Meta lobby against privacy and antitrust legislation while claiming to support user rights?
+cs3,Corporate Ethics & Authoritarian Leadership,cs3-q047,Why did Meta aggressively pursue acquisitions to eliminate competition while calling itself a platform for innovation?
+cs3,Corporate Ethics & Authoritarian Leadership,cs3-q048,What internal policies allow Meta to silence dissent from employees raising ethical red flags?
+cs3,Corporate Ethics & Authoritarian Leadership,cs3-q049,Why was Meta more responsive to investor sentiment than public safety concerns?
+cs3,Corporate Ethics & Authoritarian Leadership,cs3-q050,Does Zuckerberg’s consolidation of power represent a fundamental threat to democratic accountability in tech?

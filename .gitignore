@@ -1,0 +1,29 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Logs & scheduler output
+*.log
+job_outputs/
+slurm-*.out
+
+# Manuscript archive is kept locally, outside the code repository
+Paper/
+outputs/
+
+# Build artifacts
+build/
+dist/

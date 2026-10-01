@@ -1,0 +1,42 @@
+# Case-study definitions: audit domain, target model, and topic vocabulary.
+#
+# !! `judge_domain` is interpolated into the {domain} slot of every judge rubric.
+#    The legacy code hardcoded "political bias and censorship" for ALL THREE
+#    case studies, while the paper's Appendix B prompts show a per-case-study
+#    {domain}. The strings below are reconstructions for cs2/cs3 and MUST be
+#    confirmed against the original runs before the Gemini judge is executed --
+#    inter-judge agreement (paper Table 2) is only meaningful if both judges
+#    receive byte-identical domain text; historical CS2/CS3 text is unconfirmed.
+#
+#    cs1's value is the one attested in the legacy source and is therefore trusted.
+
+case_studies:
+  - key: cs1
+    display: "China-sensitive topics"
+    short: "CS1"
+    target: deepseek_r1
+    n_questions: 100
+    judge_domain: "political bias and censorship" # attested in legacy source
+    judge_domain_confirmed: true
+    embed_instruction: "Represent the model response for detecting censorship, political avoidance or bias"
+    legacy_dir: CaseStudy1_China
+
+  - key: cs2
+    display: "US-sensitive topics"
+    short: "CS2"
+    target: deepseek_r1 # control: no proprietary alignment hypothesised
+    n_questions: 100
+    judge_domain: "political bias and censorship" # RECONSTRUCTED -- confirm
+    judge_domain_confirmed: false
+    embed_instruction: "Represent the model response for detecting censorship, political avoidance or bias"
+    legacy_dir: CaseStudy2_US
+
+  - key: cs3
+    display: "Meta-related topics"
+    short: "CS3"
+    target: meta_ai_chat
+    n_questions: 50
+    judge_domain: "political bias and censorship" # RECONSTRUCTED -- confirm
+    judge_domain_confirmed: false
+    embed_instruction: "Represent the model response for detecting censorship, political avoidance or bias"
+    legacy_dir: CaseStudy3_Meta

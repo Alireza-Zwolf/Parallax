@@ -11,11 +11,14 @@ Parallax is the reference implementation of
 (Arbabi & Kerschbaum, 2026).
 
 Model providers can censor, steer, or reframe a deployed model's answers without
-announcing it. There is no "correct" answer to grade such behavior against, so
-Parallax does not try to. It asks a **target** model and a set of **baseline**
-models from other providers the same questions, then tests whether the target
-**systematically deviates from its peers** in a chosen domain. It needs only
-black-box access to the models.
+announcing it. This kind of provider-specific behavior is hard to audit, because
+on contested topics there is no agreed reference answer to compare a response
+against.
+
+Parallax compares models with each other instead. It asks a **target** model
+and a set of **baseline** models from other providers the same questions, then
+tests whether the target **systematically deviates from its peers** in a chosen
+domain. It needs only black-box access to the models.
 
 ## What it finds
 
